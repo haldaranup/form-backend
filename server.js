@@ -1,6 +1,7 @@
 const express = require("express");
 const connectDB = require("./config/db");
 const userRoute = require("./routes/user.route.js");
+const home = require("./routes/home.route.js");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
@@ -10,6 +11,7 @@ app.use(express.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/myStore/api/user", userRoute);
+app.use("", home);
 
 
 app.listen(5000, async () => {
