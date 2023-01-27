@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/myStore/api/user", userRoute);
-app.use("", home);
+app.use("/", userRoute);
 
 
 app.listen(5000, async () => {
