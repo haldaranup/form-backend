@@ -14,7 +14,7 @@ app.use("/myStore/api/user", userRoute);
 app.use("/", userRoute);
 
 
-app.listen(5000, async () => {
+app.listen(process.env.PORT || 3000, async () => {
   try {
     connectDB()
   } catch (error) {
